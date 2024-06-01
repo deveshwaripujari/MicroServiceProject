@@ -28,7 +28,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    docker.image('spring-boot-microservice').run('-p 8081:8080')
+                    docker.image('spring-boot-microservice').run('-p 8083:8080')
                 }
             }
         }
