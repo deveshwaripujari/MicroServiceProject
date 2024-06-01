@@ -5,12 +5,12 @@ pipeline {
         jdk 'JDK11'
     }
     environment {
-        GITHUB_CREDENTIALS = credentials('1') // Replace with your actual credentials ID
+        GITHUB_CREDENTIALS = credentials('1') // Use the ID '1' from your credentials
     }
     stages {
         stage('Checkout') {
             steps {
-                git credentialsId: GITHUB_CREDENTIALS, url: 'https://github.com/deveshwaripujari/MicroPro.git'
+                git credentialsId: GITHUB_CREDENTIALS, url: 'https://github.com/deveshwaripujari/MicroPro.git', branch: 'main'
             }
         }
         stage('Build') {
